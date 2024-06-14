@@ -10,9 +10,14 @@ thelandingchests()
 end
 
 function thelandingchests()
+for i=1,3,1 do
 Sleep(500)
 PressAndReleaseKey("m")
-Sleep(700)
+end
+Sleep(1500)
+PressAndReleaseMouseButton(1)
+PressAndReleaseMouseButton(1)
+Sleep(500)
 for i=1,20,1 do
 	MoveMouseRelative(-13,0)
 	Sleep(20)
@@ -21,13 +26,21 @@ MoveMouseRelative(0,-10)
 Sleep(1200)
 turn(22,5)
 Sleep(300)
-PressMouseButton(1)
-Sleep(1200)
-ReleaseMouseButton(1)
+PressAndReleaseMouseButton(1)
+PressAndReleaseMouseButton(1)
 Sleep(200)
-PressAndReleaseKey("m")
-Sleep(35000)
+for i=1,11,1 do
+	MoveMouseRelative(22,7)
+	Sleep(20)
+end
+Sleep(200)
+PressAndReleaseMouseButton(1)
+PressAndReleaseMouseButton(1)
+Sleep(60000)
 while (IsKeyLockOn("capslock")) do
+i=80
+while (IsKeyLockOn("capslock")) and i>0 do
+i=i-1
 turn(20,-16)
 run(5000)
 turn(20,-10)
@@ -57,11 +70,17 @@ PressKey("E")
 Sleep(1300)
 ReleaseKey("E")
 turn(20,-90)
-run(2900)
+run(3100)
 turn(20,-70)
-run(4500)
+run(4700)
+PressKey("s")
+Sleep(550)
+ReleaseKey("s")
+PressKey("a")
+Sleep(3000)
+ReleaseKey("a")
 turn(20,-52)
-run(3500)
+run(1600)
 Sleep(500)
 PressKey("E")
 Sleep(1300)
@@ -90,8 +109,8 @@ Sleep(1300)
 ReleaseKey("E")
 turn(20,-90)
 run(1500)
-turn(20,45)
-run(3600)
+turn(20,44)
+run(3700)
 Sleep(500)
 PressKey("E")
 Sleep(1300)
@@ -99,12 +118,14 @@ ReleaseKey("E")
 turn(20,-20)
 run(5000)
 turn(20,50)
-run(1500)
+run(1700)
 Sleep(500)
 PressKey("E")
 Sleep(1300)
 ReleaseKey("E")
 Sleep(500)
+if (IsKeyLockOn("capslock")) and i>0 
+then
 PressAndReleaseKey("m")
 Sleep(700)
 for i=1,20,1 do
@@ -121,6 +142,44 @@ ReleaseMouseButton(1)
 Sleep(200)
 PressAndReleaseKey("m")
 Sleep(35000)
+end
+end
+if (IsKeyLockOn("capslock"))
+then
+PressAndReleaseKey("tab")
+Sleep(500)
+PressKey("o")
+Sleep(4000)
+ReleaseKey("o")
+Sleep(5000)
+for i=1,3,1 do
+Sleep(500)
+PressAndReleaseKey("m")
+end
+Sleep(1500)
+PressAndReleaseMouseButton(1)
+PressAndReleaseMouseButton(1)
+Sleep(500)
+for i=1,20,1 do
+	MoveMouseRelative(-13,0)
+	Sleep(20)
+end
+MoveMouseRelative(0,-10)
+Sleep(1200)
+turn(25,5)
+Sleep(300)
+PressAndReleaseMouseButton(1)
+PressAndReleaseMouseButton(1)
+Sleep(200)
+for i=1,11,1 do
+	MoveMouseRelative(22,7)
+	Sleep(20)
+end
+Sleep(200)
+PressAndReleaseMouseButton(1)
+PressAndReleaseMouseButton(1)
+Sleep(60000)
+end
 end
 end
 
