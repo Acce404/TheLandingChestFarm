@@ -183,6 +183,13 @@ end
 end
 end
 
+function turn(times,px)
+for i=1,times,1 do
+	MoveMouseRelative(px,0)
+	Sleep(10)
+end
+end
+
 function run(t)
 	PressKey("w")
 	Sleep(10)
