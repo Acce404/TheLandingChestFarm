@@ -26,7 +26,7 @@ Sleep(1200)
 ReleaseMouseButton(1)
 Sleep(200)
 PressAndReleaseKey("m")
-Sleep(15000)
+Sleep(35000)
 while (IsKeyLockOn("capslock")) do
 turn(20,-16)
 run(5000)
