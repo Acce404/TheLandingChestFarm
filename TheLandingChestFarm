@@ -10,7 +10,7 @@ thelandingchests()
 end
 
 function thelandingchests()
-while (IsKeyLockOn("capslock")) do
+Sleep(500)
 PressAndReleaseKey("m")
 Sleep(700)
 for i=1,20,1 do
@@ -24,8 +24,10 @@ Sleep(300)
 PressMouseButton(1)
 Sleep(1200)
 ReleaseMouseButton(1)
-Sleep(35000)
-
+Sleep(200)
+PressAndReleaseKey("m")
+Sleep(15000)
+while (IsKeyLockOn("capslock")) do
 turn(20,-16)
 run(5000)
 turn(20,-10)
@@ -102,6 +104,23 @@ Sleep(500)
 PressKey("E")
 Sleep(1300)
 ReleaseKey("E")
+Sleep(500)
+PressAndReleaseKey("m")
+Sleep(700)
+for i=1,20,1 do
+	MoveMouseRelative(-13,0)
+	Sleep(20)
+end
+MoveMouseRelative(0,-10)
+Sleep(1200)
+turn(25,5)
+Sleep(300)
+PressMouseButton(1)
+Sleep(1200)
+ReleaseMouseButton(1)
+Sleep(200)
+PressAndReleaseKey("m")
+Sleep(35000)
 end
 end
 
