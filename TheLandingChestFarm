@@ -15,6 +15,7 @@ for i=1,3,1 do
 Sleep(500)
 PressAndReleaseKey("m")
 end
+x0,y0=GetMousePosition()
 Sleep(1500)
 PressAndReleaseMouseButton(1)
 PressAndReleaseMouseButton(1)
@@ -128,6 +129,19 @@ PressKey("E")
 Sleep(1300)
 ReleaseKey("E")
 Sleep(500)
+flag=checkinscreen(x0,y0)
+if not flag then
+MoveMouseTo(x0,y0)
+Sleep(500)
+PressAndReleaseMouseButton(1)
+PressAndReleaseMouseButton(1)
+Sleep(500)
+PressAndReleaseKey("escape")
+Sleep(200)
+PressAndReleaseKey("escape")
+Sleep(200)
+i=-2
+end
 if (IsKeyLockOn("capslock")) and i>0 
 then
 PressAndReleaseKey("m")
@@ -150,12 +164,14 @@ end
 end
 if (IsKeyLockOn("capslock"))
 then
+if i > -1 then
 PressAndReleaseKey("tab")
 Sleep(500)
 PressKey("o")
 Sleep(4000)
 ReleaseKey("o")
 Sleep(5000)
+end
 for i=1,3,1 do
 Sleep(500)
 PressAndReleaseKey("m")
@@ -185,6 +201,18 @@ PressAndReleaseMouseButton(1)
 PressAndReleaseMouseButton(1)
 Sleep(60000)
 end
+end
+end
+
+function checkinscreen(x0,y0)
+xoff=23325
+yoff=25206
+x,y=GetMousePosition()
+if x > x0+xoff or x < x0-xoff or y > y0+yoff or y < y0-yoff
+then
+return false
+else
+return true
 end
 end
 
